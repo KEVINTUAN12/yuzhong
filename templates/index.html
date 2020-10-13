@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>育种</title>
+    <style>
+        input[type=submit]{
+
+            width: 200px;
+            height:100px;
+            border:none;
+            background:none;
+            cursor:pointer;
+            outline:none;
+
+         }
+
+    </style>
+
+</head>
+<body background="static/bkg.png"
+style=" background-repeat:no-repeat ;
+background-size:100% 100%;
+background-attachment: fixed;">
+
+
+
+    <form action="/dsp_her" method="POST">
+        <input type="submit" value="显示已有数据遗传力" style='font-size:16px'/>
+    </form>
+    <form action="/dsp_pcc" method="POST">
+        <input type="submit" value="显示已有数据表型相关" style='font-size:16px'/>
+    </form>
+    <form action="/dsp_gcc" method="POST">
+        <input type="submit" value="显示已有数据遗传相关指数" style='font-size:16px'/>
+    </form>
+    <form action="/dsp_bv" method="POST">
+        <input type="submit" value="显示已有数据各性状育种值" style='font-size:16px'/>
+    </form>
+    <form action="/dsp_cbv" method="POST">
+        <input type="submit" value="显示已有数据综合育种值" style='font-size:16px'/>
+    </form>
+    <form action="/dsp_eei" method="POST">
+        <input type="submit" value="显示已有数据早选指数" style='font-size:16px'/>
+    </form>
+    <form action="/wbp" method="POST" >
+        <input type="submit" value="输入数据计算早选指数" style='font-size:16px'/>
+    </form>
+
+
+<!--    <input type="button" name="close" value="关闭" οnclick="window.close();" />-->
+
+</body>
+</html>
