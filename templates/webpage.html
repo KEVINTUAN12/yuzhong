@@ -1,0 +1,59 @@
+<!--计算功能-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <title>育种</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body background="static/bkg.png"
+style=" background-repeat:no-repeat ;
+background-size:100% 100%;
+background-attachment: fixed;">
+<a href="/" >Home</a>
+<br>
+<script type="text/javascript">
+        function Calc() {
+
+            var x = parseInt(document.getElementById("Text4").value);
+            var y = parseInt(document.getElementById("Text3").value);
+            var resultValue = x/y;
+            document.getElementById("Text8").value = resultValue;
+
+        }
+    </script>
+    <form action="/cal" method="POST">
+
+        场次信息: <input type="text" name="farm" id="Text1" placeholder="公主岭"/>
+        <br>
+        体重信息: <input type="text" name="bw" id="Text2" placeholder="82"/>
+        <br>
+        体长信息: <input type="text" name="bl" id="Text3" placeholder="87"/>
+        <br>
+        胸围信息: <input type="text" name="cw" id="Text4" placeholder="110"/>
+        <br>
+        眼肌面积: <input type="text" name="ema" id="Text5" placeholder="24"/>
+        <br>
+        基因信息: <input type="text" name="gene" id="Text6" placeholder="AA"/>
+        <br>
+        外貌评分: <input type="text" name="outlook" id="Text7" placeholder="96"/>
+        <br>
+        <input type="text" name="bt" id="Text8" style="visibility:hidden"/>
+        <!--早选指数: <input type="text" class="form-control" name="bt" id="Text8" />-->
+        <br>
+        <span style="color: #FF0000; ">{{msg}}</span>
+        <br>
+        <input type="submit" class="form-control" value="早选指数计算" onclick="Calc()"/>
+        <br>
+        <p class="form-control-static">场次信息只可输入"公主岭"和"肇州"</p>
+        <p class="form-control-static">基因信息只可输入"AA"、"AB"和"BB"</p>
+   </form>
+
+
+
+
+
+
+
+</body>
+</html>

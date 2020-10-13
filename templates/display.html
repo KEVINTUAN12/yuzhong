@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示已有数据遗传力</title>
+    <script src="/static/echarts.min.js"></script>
+</head>
+<body background="static/bkg.png"
+style=" background-repeat:no-repeat ;
+background-size:100% 100%;
+background-attachment: fixed;">
+<a href="/" >Home</a>
+<br>
+<div id="picture" style="width: 1800px;height: 800px;"></div>
+<script type="text/javascript">
+    var mychart  = echarts.init(document.getElementById('picture'));
+    var option = {{ picture_options | safe }};
+    mychart.setOption(option);
+</script>
+
+
+</body>
+</html>
